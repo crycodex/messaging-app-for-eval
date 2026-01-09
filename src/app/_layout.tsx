@@ -53,9 +53,11 @@ export default function RootLayout() {
           value={colorScheme === "dark" ? DarkTheme : DefaultTheme}
         >
           <SocketProvider>
-            <GestureHandlerRootView>
+            <GestureHandlerRootView style={{ flex: 1 }}>
               <Stack>
                 <Stack.Screen name="index" options={{ headerShown: false }} />
+                <Stack.Screen name="login" options={{ headerShown: false }} />
+                <Stack.Screen name="chat" options={{ headerShown: false }} />
               </Stack>
 
               <StatusBar style="light" />

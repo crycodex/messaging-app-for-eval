@@ -1,12 +1,15 @@
+import { StorageService } from "../../../../../utils/storage";
+
 export const authInterceptor = async (config: any) => {
   if (!config || !config.headers["Content-Type"]) {
     config.headers["Content-Type"] = "application/json;charset=UTF-8";
   }
 
-  // NOTE: Replace with actual token retrieval logic
-  const token = "";
+  const token = await StorageService.getToken();
 
-  config.headers.Authorization = `Bearer ${token}`;
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
 
   return config;
 };

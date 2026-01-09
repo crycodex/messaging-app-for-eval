@@ -21,6 +21,12 @@ const MAPPING = {
   "settings.fill": "settings",
   "check.fill": "check",
   "send.fill": "send",
+  "plus.circle.fill": "add-circle",
+  "camera.fill": "camera-alt",
+  "photo.fill": "photo",
+  "doc.fill": "description",
+  "mic.fill": "mic",
+  "rectangle.portrait.and.arrow.right": "logout",
 } as IconMapping;
 
 /**

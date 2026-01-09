@@ -24,4 +24,17 @@ export default class ChatService {
 
     return message;
   }
+
+  public async sendImageMessage(
+    uri: string,
+    caption: string
+  ): Promise<SendMessageResponse> {
+    const message =
+      await this.chatRepository.sendImageMessage<SendMessageResponse>(
+        uri,
+        caption
+      );
+
+    return message;
+  }
 }
